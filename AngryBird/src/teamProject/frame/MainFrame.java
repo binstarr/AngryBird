@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import teamProject.block.Block1;
 import teamProject.player.BlackBird;
 import teamProject.player.RedBird;
 import teamProject.player.YellowBird;
@@ -17,6 +18,7 @@ public class MainFrame extends JFrame {
 	private RedBird redBird;
 	private YellowBird yellowBird;
 	private BlackBird blackBird;
+	private Block1 block1;
 	private MyMouseAdapter myAdapter;
 
 	private double pressX;
@@ -72,7 +74,7 @@ public class MainFrame extends JFrame {
 
 		redBird = new RedBird(this);
 		yellowBird = new YellowBird(this);
-
+		block1 = new Block1(this);
 		myAdapter = new MyMouseAdapter();
 
 	}
@@ -82,6 +84,7 @@ public class MainFrame extends JFrame {
 		setLayout(null);
 		setLocationRelativeTo(null);
 		add(redBird);
+		add(block1);
 	}
 
 	private void addEventListenr() {
